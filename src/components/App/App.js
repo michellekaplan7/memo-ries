@@ -1,12 +1,19 @@
 import React from 'react';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
 import Landing from '../Landing/Landing'
 
 function App() {
   return (
-    <div className="App">
-      <Landing />
-    </div>
+    <main className="App">
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => <Landing />}
+        />
+      </Switch>
+    </main>
   );
 }
 
