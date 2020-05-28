@@ -12,6 +12,7 @@ Commit Emojis:
 :camera_flash: adding screenshots
 :bento: Adding new assets or images
 :beetle: If it is a bug or issue fix, describe the issue that was fixed.
+:package: Installing new NMP package
 
 
 If it is a new feature, describe the feature and the iteration of the project spec it addresses.
@@ -32,4 +33,4 @@ Please delete options that are not relevant.
 - [ ] I have commented my code, particularly in hard-to-understand areas
 
 ## Issue(s) this PR relates to:
-- 
+-
