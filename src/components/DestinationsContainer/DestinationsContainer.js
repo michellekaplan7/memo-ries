@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DestinationButton from '../DestinationButton/DestinationButton';
 
-const DestinationsContainer = () => {
+const DestinationsContainer = ({ setSelectedDestination }) => {
   const [destinationNames, setDestinationNames] = useState(
     [{
           destination: 'Denver',
@@ -31,7 +31,7 @@ const DestinationsContainer = () => {
   const displayDestinations = () => {
    return destinationNames.map(destination => {
       return (
-        <DestinationButton destination={destination} />
+        <DestinationButton setSelectedDestination={setSelectedDestination} key={destination.id} destination={destination} />
       )
     })
   }
