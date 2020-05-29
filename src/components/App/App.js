@@ -8,7 +8,7 @@ import DestinationDetails from '../DestinationDetails/DestinationDetails';
 import DestinationsContainer from '../DestinationsContainer/DestinationsContainer';
 
 const App = () => {
-  const [selectedDestination, setSelectedDestination] = useState('');
+  const [selectedDestination, setSelectedDestination] = useState({});
   return (
     <main className="App">
       <Switch>
