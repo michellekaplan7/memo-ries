@@ -5,15 +5,6 @@ import Header from '../Header/Header';
 
 const DestinationButton = (props) => { 
 
-  // const displayDestinationDetails = () => {
-  //   return(
-  //     <div>
-  //       <Header />
-  //       <DestinationDetails destination={ destination }/>
-  //     </div>
-  //   );
-  // }
-
   return(
     <Link to={`/destinations/${props.destination.destination}`}>
       <button
