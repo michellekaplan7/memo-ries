@@ -5,9 +5,9 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 const DestinationDetails = ({destination}) => {
   const pictures = [
-		{ url: `/public/${destination.destination}_1.jpg` },
-		{ url: `/public/${destination.destination}_2.jpg` },
-		{ url: `/public/${destination.destination}_3.jpg` },
+		{ url: `/images/${destination.destination}_1.jpg` },
+		{ url: `/images/${destination.destination}_2.jpg` },
+		{ url: `/images/${destination.destination}_3.jpg` },
   ];
  
   return(
