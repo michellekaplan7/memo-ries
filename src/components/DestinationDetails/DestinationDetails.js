@@ -19,7 +19,7 @@ const DestinationDetails = ({destination}) => {
         <SimpleImageSlider width={600} height={400} images={pictures} />
       </div>
       <div>
-        <Recording />
+        <Recording key={destination.id}/>
       </div>
     </div>
   );
