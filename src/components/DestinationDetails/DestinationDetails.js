@@ -1,7 +1,7 @@
 import React from 'react';
 import './DestinationDetails.css';
 import SimpleImageSlider from "react-simple-image-slider";
-
+import Recording from '../Recording/Recording'
 
 const DestinationDetails = ({destination}) => {
   const pictures = [
@@ -18,7 +18,11 @@ const DestinationDetails = ({destination}) => {
       <div className="pictures">
         <SimpleImageSlider width={600} height={400} images={pictures} />
       </div>
+      <div>
+        <Recording />
+      </div>
     </div>
   );
 }
+
 export default DestinationDetails;
