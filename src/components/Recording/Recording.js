@@ -44,7 +44,7 @@ const Recording = () => {
   };
 
   const renderAllRecordings = () => {
-    let test = savedRecords.map((rec) => {
+    return savedRecords.map((rec) => {
       return (
         <Recorded
           key={rec.id}
@@ -54,7 +54,6 @@ const Recording = () => {
         />
       );
     });
-    return test;
   };
 
   return (
