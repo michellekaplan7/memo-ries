@@ -17,4 +17,8 @@ describe("Header", () => {
         expect(appName).toBeInTheDocument();
         expect(viewMemBtn).toBeInTheDocument();
     })
+    
+    it('should update the pathname when the View All Memories button is clicked', () => {
+        
+    })
 })
