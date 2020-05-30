@@ -63,6 +63,7 @@ const Recording = () => {
         <button onClick={() => startAudio()}>Start microphone</button>
         <button onClick={() => stopAudio()}>Stop microphone</button>
       </div>
+      <p className="recording-count">Recordings ({`${savedRecords.length}`})</p>
       <div>{renderAllRecordings()}</div>
     </div>
   );
