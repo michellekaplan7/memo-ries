@@ -1,14 +1,24 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import './Landing.css';
+import "./Landing.css";
 
 function Landing() {
-    return (
-        <div>
-            <h2>Welcome!</h2>
-            <Link to='/destinations'>Let the memo-ries begin!</Link>
-        </div>
-    )
+  return (
+    <div className="landing-container">
+      <div className="landing-logo-container">
+        <img alt="memories logo" src="/images/MEMORIES_logo_mobile.png" />
+      </div>
+      <h2>Welcome!</h2>
+      <hr />
+      <p>
+        An audio, visual memory journal that allows you to catalog your
+        experiences across Colorado.
+      </p>
+      <Link className="welcome-link" to="/destinations">
+        <button className="welcome-button">Let the memories begin!</button>
+      </Link>
+    </div>
+  );
 }
 
-export default Landing
+export default Landing;

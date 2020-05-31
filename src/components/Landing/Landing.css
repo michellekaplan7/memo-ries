@@ -1,0 +1,74 @@
+.welcome-link {
+  text-decoration: none;
+  color: #575761;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-link:hover {
+  text-decoration: none;
+  color: #575761;
+}
+
+.welcome-button {
+  width: 20em;
+  height: 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  background-color: #e4fde1;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.welcome-button:hover {
+  background-color: #8acb88;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.landing-container h2 {
+  margin: 2em 0 1em 0;
+  color: #8acb88;
+  text-transform: uppercase;
+}
+
+.landing-container p {
+  margin: 2em;
+  width: 80%;
+  line-height: 2em;
+  color: #575761;
+}
+
+/* hr {
+  width: 50%;
+  margin-left: 6em;
+} */
+
+.landing-logo-container {
+  width: 100%;
+  height: 200px;
+  background-color: #575761;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-logo-container img {
+  width: 80%;
+}
+
+.landing-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/sound_wave_grey_1600px.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 60% 85%;
+  display: flex;
+  flex-direction: column;
+}
