@@ -51,9 +51,7 @@ const App = () => {
           path="/"
           render={() => {
             return (
-              <div>
                 <Landing />
-              </div>
             );
           }}
         />
