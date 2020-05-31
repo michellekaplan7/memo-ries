@@ -46,4 +46,6 @@ describe("DestinationButton", () => {
     fireEvent.click(destinationLink);
     expect(history.location.pathname).toBe("/destinations/FoCo");
   })
+
+  //additional test for setSelectedDestination being called with proper arguments being passed
 });
