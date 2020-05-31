@@ -45,7 +45,31 @@ describe("DestinationButton", () => {
     const destinationLink = getByRole("link", { name: "FoCo" });
     fireEvent.click(destinationLink);
     expect(history.location.pathname).toBe("/destinations/FoCo");
-  })
+  });
 
-  //additional test for setSelectedDestination being called with proper arguments being passed
+  it("should be called with the proper arguments when button is clicked on", () => {
+    const history = createMemoryHistory();
+    const mockSetSelectedDestination = jest.fn();
+    const { getByRole } = render(
+      <Router history={history}>
+        <DestinationButton
+          setSelectedDestination={mockSetSelectedDestination}
+          key={3}
+          destination={{
+            destination: "FoCo",
+            destinationFullName: "Fort Collins",
+            id: 3,
+          }}
+        />
+      </Router>
+    );
+
+    const destinationButton = getByRole("button", { name: "FoCo" });
+    fireEvent.click(destinationButton);
+    expect(mockSetSelectedDestination).toHaveBeenCalledWith({
+      destination: "FoCo",
+      destinationFullName: "Fort Collins",
+      id: 3,
+    });
+  });
 });
