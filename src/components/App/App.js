@@ -7,8 +7,36 @@ import Header from "../Header/Header";
 import DestinationDetails from "../DestinationDetails/DestinationDetails";
 import DestinationsContainer from "../DestinationsContainer/DestinationsContainer";
 
-const App = () => {
+const App = () => { 
+  const [destinations, setDestinations] = useState(
+    [{
+          destination: 'Denver',
+          destinationFullName: 'Denver',
+          id: 1,
+          recordings: [],
+        },
+        {
+          destination: 'Aspen',
+          destinationFullName: 'Aspen',
+          id: 2,
+          recordings: [],
+        },
+        {
+          destination: 'FoCo',
+          destinationFullName: 'Fort Collins',
+          id: 3,
+          recordings: [],
+        },
+        {
+          destination: 'RMNP',
+          destinationFullName: 'Rocky Mountain National Park',
+          id: 4,
+          recordings: [],
+        }]
+  )
+        
   const [selectedDestination, setSelectedDestination] = useState({});
+
   return (
     <main className="App">
       <Switch>
@@ -18,12 +46,19 @@ const App = () => {
             return (
               <div>
                 <Header />
-                <Link to="/destinations">
+                <Link to={{
+                  pathname: "/destinations",
+                  recordings: selectedDestination.recordings
+                  }}>
                   <p>destinations</p>
                 </Link>{" "}
                 > <p>{match.params.destinationName}</p>
                 <div className="destination-details-container">
-                  <DestinationDetails destination={selectedDestination} />
+                  <DestinationDetails
+                   selectedDestination={selectedDestination}
+                   setDestinations={setDestinations}
+                   destinations={destinations}
+                 />
                 </div>
               </div>
             );
@@ -40,6 +75,7 @@ const App = () => {
                 <p>destinations</p>
                 <DestinationsContainer
                   setSelectedDestination={setSelectedDestination}
+                  destinations={destinations}
                 />
               </div>
             );
