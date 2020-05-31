@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './DestinationsContainer.css';
-import { Route, Switch } from "react-router-dom";
-import { Link } from "react-router-dom";
 import DestinationButton from '../DestinationButton/DestinationButton';
 
 const DestinationsContainer = ({ setSelectedDestination }) => {
