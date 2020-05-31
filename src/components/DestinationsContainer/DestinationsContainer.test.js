@@ -12,7 +12,7 @@ describe("DestinationContainer", () => {
       </MemoryRouter>
     );
 
-    const destinationButtons = getAllByRole('button');
+    const destinationButtons = getAllByRole("button");
     expect(destinationButtons).toHaveLength(4);
   });
 });
