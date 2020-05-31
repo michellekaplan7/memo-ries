@@ -25,14 +25,14 @@ describe("Landing", () => {
   });
 
   it("should update the pathname upon clicking the button", () => {
-      const history = createMemoryHistory();
-      const { getByRole } = render(
-          <Router history={history}>
-              <Landing />
-          </Router>
-      )
-      const link = getByRole("link", { name: "Let the memories begin!" });
-      fireEvent.click(link);
-      expect(history.location.pathname).toBe("/destinations")
-  })
+    const history = createMemoryHistory();
+    const { getByRole } = render(
+      <Router history={history}>
+        <Landing />
+      </Router>
+    );
+    const link = getByRole("link", { name: "Let the memories begin!" });
+    fireEvent.click(link);
+    expect(history.location.pathname).toBe("/destinations");
+  });
 });
