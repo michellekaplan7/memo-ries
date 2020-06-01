@@ -6,7 +6,7 @@ const Header = () => {
   return(
     <header>
       <div className="landing-logo-container">
-        <img alt="memories logo" src="/images/MEMORIES_logo_mobile.png" />
+        <img alt="memories-logo" src="/images/MEMORIES_logo_mobile.png" />
       </div>
       <Link className='myMemoriesButtonLink' to="/memories">
         <button className='myMemoriesButton'>View All Memories</button>

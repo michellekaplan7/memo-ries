@@ -8,13 +8,13 @@ import "@testing-library/jest-dom/";
 
 describe("Header", () => {
   it("Should display the header when rendered", () => {
-    const { getByText } = render(
+    const { getByText, getByAltText } = render(
       <MemoryRouter>
         <Header />
       </MemoryRouter>
     );
 
-    const appName = getByText("MEMO—ries");
+    const appName = getByAltText("memories-logo");
     const viewMemBtn = getByText("View All Memories");
 
     expect(appName).toBeInTheDocument();
