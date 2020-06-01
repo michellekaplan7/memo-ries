@@ -6,6 +6,33 @@
   margin: 0;
   padding: 0;
 }
+.destinationContainer {
+  width: 100%;
+}
+.destinationDetails {
+  width: 100%;
+}
+
+.destination-details-container {
+  width: 100%;
+}
+
+.bread-crumb-container {
+  margin: 2%;
+  display: flex;
+}
+
+.main-bread-crumb {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  display: contents;
+}
+
+.breadCrumbLink {
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 900px) {
   main {

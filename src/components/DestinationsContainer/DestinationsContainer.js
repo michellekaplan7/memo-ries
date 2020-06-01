@@ -14,8 +14,11 @@ const DestinationsContainer = ({ destinations, setSelectedDestination }) => {
   }
 
   return (
-    <div>
-      {displayDestinations()}
+    <div className='main-wrapper-destinationButtons'>
+      <p className='destinationContainerHeader'>destinations</p>
+      <div className='destinationButtonContainer'>
+        {displayDestinations()}
+      </div>
     </div>
   );
 }

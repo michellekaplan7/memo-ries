@@ -1,0 +1,32 @@
+.destinationButtonLink {
+  text-decoration: none;
+  color: #575761;
+  width: 100%;
+  height: 100%;
+}
+
+.destinationButtonLink:hover {
+  text-decoration: none;
+  color: #575761;
+}
+
+.destinationButton {
+  width: 10em;
+  height: 45px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  background-color: #e4fde1;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.destinationButton:hover {
+  background-color: #8acb88;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}

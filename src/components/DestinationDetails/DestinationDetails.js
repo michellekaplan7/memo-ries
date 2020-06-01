@@ -12,19 +12,21 @@ const DestinationDetails = ({selectedDestination, destinations}) => {
   ];
   
   return(
-    <div>
-      <h2>
-      {selectedDestination.destinationFullName}
+    <div className='destination-details-container'>
+      <h2 className='destination-details-header'>
+        {selectedDestination.destinationFullName}
       </h2>
-      <div className="pictures">
-        <SimpleImageSlider width={600} height={400} images={pictures} />
-      </div>
-      <div>
-        <Recording 
-        key={selectedDestination.id}
-        destinations={destinations}
-        selectedDestination={selectedDestination}
-        />
+      <div className='destination-details-wrapper'>
+        <div className="pictures">
+          <SimpleImageSlider width={278.7} height={300} images={pictures} />
+        </div>
+        <div>
+          <Recording 
+            key={selectedDestination.id}
+            destinations={destinations}
+            selectedDestination={selectedDestination}
+          />
+        </div>
       </div>
     </div>
   );

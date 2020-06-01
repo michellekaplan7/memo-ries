@@ -44,15 +44,18 @@ const App = () => {
           path="/destinations/:destinationName"
           render={({ match }) => {
             return (
-              <div>
+              <div className='destinationDetails'>
                 <Header />
-                <Link to={{
-                  pathname: "/destinations",
-                  recordings: selectedDestination.recordings
-                  }}>
-                  <p>destinations</p>
-                </Link>{" "}
-                > <p>{match.params.destinationName}</p>
+
+                <div className='bread-crumb-container'>
+                  <Link className='breadCrumbLink' to={{
+                    pathname: "/destinations",
+                    recordings: selectedDestination.recordings
+                    }}>
+                    <p className="main-bread-crumb">destinations ></p>
+                  </Link>{" "} <p className="main-bread-crumb">{match.params.destinationName}</p> 
+                </div>
+
                 <div className="destination-details-container">
                   <DestinationDetails
                    selectedDestination={selectedDestination}
@@ -70,9 +73,11 @@ const App = () => {
           path="/destinations"
           render={() => {
             return (
-              <div>
+              <div className='destinationContainer'>
                 <Header />
-                <p>destinations</p>
+                <div className="bread-crumb-container">
+                <p className="main-bread-crumb">destinations ></p>
+                </div>
                 <DestinationsContainer
                   setSelectedDestination={setSelectedDestination}
                   destinations={destinations}
