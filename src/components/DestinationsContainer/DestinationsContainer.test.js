@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/";
 
-describe("DestinationContainer", () => {
+describe("DestinationsContainer", () => {
   it("holds the destination buttons", () => {
     const { getAllByRole } = render(
       <MemoryRouter>
