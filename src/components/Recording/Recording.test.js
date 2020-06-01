@@ -22,4 +22,4 @@ describe("Recording", () => {
     expect(stopButton).toBeInTheDocument();
     expect(numRecordings).toBeInTheDocument();
   });
-});
+  });
