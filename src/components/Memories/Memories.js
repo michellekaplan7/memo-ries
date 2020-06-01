@@ -21,12 +21,17 @@ export const Memories = ({ destinations }) => {
 
   const destinationContainers = destinations.map((destination) => {
     return (
-      <div key={destination.id} className="desination-recordings-container">
+      <div key={destination.id} className="destination-recordings-container">
         <h3>{destination.destinationFullName} Memories:</h3>
         {displayMemories(destination)}
       </div>
     );
   });
 
-  return <div className="memories-container">{destinationContainers}</div>;
+  return(
+    <div className="memories-container">
+      {destinationContainers}
+      <a href="#memories-container">Back to top of page</a>
+    </div>
+  )
 };
