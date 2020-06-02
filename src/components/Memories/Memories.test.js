@@ -57,9 +57,9 @@ it('Should display a recording for a destination when one is present', () => {
     </MemoryRouter>
   );
 
-  const { getByText, getByRole, getByAltText } = render(router);
+  const { getByText, getByRole, getByAltText, getByTestId } = render(router);
   const destination = getByText("Denver Memories:");
-  const recordingElement = getByRole("audio");
+  const recordingElement = getByTestId("audio");
 
   expect(destination).toBeInTheDocument();
   expect(recordingElement).toBeInTheDocument();
