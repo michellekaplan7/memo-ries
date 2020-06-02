@@ -19,8 +19,9 @@ const Recording = ( { destinations, selectedDestination}) => {
 
   const findSpecificDestination = () => {
     return destinations.map(destination => {
-      if( destination.id === selectedDestination.id) {
-          destination.recordings = savedRecords
+      if (destination.id === selectedDestination.id) {
+        destination.recordings = savedRecords;
+        return destination;
       }
     })
   }
@@ -58,8 +59,12 @@ const Recording = ( { destinations, selectedDestination}) => {
   };
 
   const stopAudio = () => {
-    rec.stop();
-    onSuccess();
+    if (rec.state === 'recording') {
+      rec.stop();
+      onSuccess();
+    } else {
+      return;
+    }
   };
 
   const renderAllRecordings = () => {
