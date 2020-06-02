@@ -22,10 +22,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 80%;
-  border: 1px solid #575761;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-
+  width: 100%;
+  border: 1px solid red;
 }
 
 .pictures {

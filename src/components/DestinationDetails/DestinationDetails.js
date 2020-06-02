@@ -10,7 +10,7 @@ const DestinationDetails = ({selectedDestination, destinations}) => {
 		{ url: `/images/${selectedDestination.destination}_2.jpg` },
 		{ url: `/images/${selectedDestination.destination}_3.jpg` },
   ];
-  
+
   return(
     <div className='destination-details-container'>
       <h2 className='destination-details-header'>
@@ -18,10 +18,10 @@ const DestinationDetails = ({selectedDestination, destinations}) => {
       </h2>
       <div className='destination-details-wrapper'>
         <div className="pictures">
-          <SimpleImageSlider width={278.7} height={300} images={pictures} />
+          <SimpleImageSlider width={325} height={325} images={pictures} />
         </div>
         <div>
-          <Recording 
+          <Recording
             key={selectedDestination.id}
             destinations={destinations}
             selectedDestination={selectedDestination}

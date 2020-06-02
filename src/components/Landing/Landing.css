@@ -42,33 +42,40 @@
   width: 80%;
   line-height: 2em;
   color: #575761;
+  background-color: #e4fde1;
+  border: 3px solid #8acb88;
+  border-radius: 20px;
+  padding: 20px 20px 20px 20px;
+  margin-left: 2.25rem;
 }
 
-/* hr {
+hr {
   width: 50%;
-  margin-left: 6em;
-} */
+  text-align: center;
+  margin-left: 5.75rem;
+  margin-bottom: 1rem;
+}
 
 .landing-logo-container {
-  width: 100%;
-  height: 100px;
-  background-color: #575761;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* width: 100%; */
+  /* height: 100px; */
+  /* background-color: #648381; */
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .landing-logo-container img {
-  width: 80%;
+  background-color: #575761;
+  height: 185px;
 }
 
 .landing-container {
   width: 100%;
   height: 100%;
-  background-image: url("/images/sound_wave_grey_1600px.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 60% 85%;
+  background-image: url("/images/sound_bars_v1.png");
+  background-size: 255px;
+  background-repeat: repeat-x;
+  background-position: 50% 90%;
   display: flex;
   flex-direction: column;
 }
