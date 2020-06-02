@@ -1,20 +1,19 @@
-import React from 'react';  
+import React from "react";
 import { Link } from "react-router-dom";
-import DestinationDetails from '../DestinationDetails/DestinationDetails';
-import Header from '../Header/Header';
+import './DestinationButton.css';
 
-const DestinationButton = (props) => { 
-
-  return(
-    <Link to={`/destinations/${props.destination.destination}`}>
+const DestinationButton = (props) => {
+  return (
+    <Link className='destinationButtonLink' to={`/destinations/${props.destination.destination}`}>
       <button
-      id={props.destination.id}
-      onClick={() => props.setSelectedDestination(props.destination)}
+      className='destinationButton'
+        id={props.destination.id}
+        onClick={() => props.setSelectedDestination(props.destination)}
       >
         {props.destination.destination}
-      </button> 
+      </button>
     </Link>
   );
- }
+};
 
 export default DestinationButton;

@@ -3,23 +3,30 @@ import './DestinationDetails.css';
 import SimpleImageSlider from "react-simple-image-slider";
 import Recording from '../Recording/Recording'
 
-const DestinationDetails = ({destination}) => {
+const DestinationDetails = ({selectedDestination, destinations}) => {
+
   const pictures = [
-		{ url: `/images/${destination.destination}_1.jpg` },
-		{ url: `/images/${destination.destination}_2.jpg` },
-		{ url: `/images/${destination.destination}_3.jpg` },
+		{ url: `/images/${selectedDestination.destination}_1.jpg` },
+		{ url: `/images/${selectedDestination.destination}_2.jpg` },
+		{ url: `/images/${selectedDestination.destination}_3.jpg` },
   ];
- 
+  
   return(
-    <div>
-      <h2>
-      {destination.destinationFullName}
+    <div className='destination-details-container'>
+      <h2 className='destination-details-header'>
+        {selectedDestination.destinationFullName}
       </h2>
-      <div className="pictures">
-        <SimpleImageSlider width={600} height={400} images={pictures} />
-      </div>
-      <div>
-        <Recording key={destination.id}/>
+      <div className='destination-details-wrapper'>
+        <div className="pictures">
+          <SimpleImageSlider width={278.7} height={300} images={pictures} />
+        </div>
+        <div>
+          <Recording 
+            key={selectedDestination.id}
+            destinations={destinations}
+            selectedDestination={selectedDestination}
+          />
+        </div>
       </div>
     </div>
   );

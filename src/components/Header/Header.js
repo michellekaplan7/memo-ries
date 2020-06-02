@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return(
     <header>
-      <h1>MEMO—ries</h1>
-      <Link to="/memories">
-        <button>View All Memories</button>
+      <div className="landing-logo-container">
+        <img alt="memories-logo" src="/images/MEMORIES_logo_mobile.png" />
+      </div>
+      <Link className='myMemoriesButtonLink' to="/memories">
+        <button className='myMemoriesButton'>View All Memories</button>
       </Link>
     </header>
   );

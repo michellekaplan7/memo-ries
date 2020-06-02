@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&family=Montserrat:wght@300;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.destinationContainer {
+  width: 100%;
+}
+.destinationDetails {
+  width: 100%;
+}
+
+.destination-details-container {
+  width: 100%;
+}
+
+.bread-crumb-container {
+  margin: 2%;
+  display: flex;
+}
+
+.main-bread-crumb {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  display: contents;
+}
+
+.breadCrumbLink {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: scroll;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: scroll;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+}

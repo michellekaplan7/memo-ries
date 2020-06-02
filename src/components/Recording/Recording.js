@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Recorded } from "../Recorded/Recorded";
 
-const Recording = () => {
+const Recording = ( { destinations, selectedDestination}) => {
   let rec = {};
   let audioChunks = [];
-  const [savedRecords, setSavedRecords] = useState([]);
+  
+  const [savedRecords, setSavedRecords] = useState(() => {
+    if (selectedDestination.recordings) {
+      return [...selectedDestination.recordings]
+    }
+      return []
+  });
+
+  useEffect(() => {
+    findSpecificDestination()
+  })
+
+  const findSpecificDestination = () => {
+    return destinations.map(destination => {
+      if( destination.id === selectedDestination.id) {
+          destination.recordings = savedRecords
+      }
+    })
+  }
 
   const getMediaRecordingApi = async () => {
     let audioPromise = await navigator.mediaDevices.getUserMedia({

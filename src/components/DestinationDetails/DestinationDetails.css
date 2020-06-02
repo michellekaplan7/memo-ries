@@ -1,0 +1,40 @@
+.destination-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.destination-details-header {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  background-color: #e4fde1;
+  border: 1px solid #575761;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  width: 60%;
+  margin: 3%;
+}
+
+.destination-details-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid #575761;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.pictures {
+  width: auto;
+  align-items: center;
+  margin: 2%;
+}
+
+.eachPicture {
+height: 25vh;
+width: 100%;
+}

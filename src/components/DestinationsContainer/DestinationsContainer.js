@@ -1,35 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './DestinationsContainer.css';
-import { Route, Switch } from "react-router-dom";
-import { Link } from "react-router-dom";
 import DestinationButton from '../DestinationButton/DestinationButton';
 
-const DestinationsContainer = ({ setSelectedDestination }) => {
-  const [destinationNames, setDestinationNames] = useState(
-    [{
-          destination: 'Denver',
-          destinationFullName: 'Denver',
-          id: 1,
-        },
-        {
-          destination: 'Aspen',
-          destinationFullName: 'Aspen',
-          id: 2,
-        },
-        {
-          destination: 'FoCo',
-          destinationFullName: 'Fort Collins',
-          id: 3,
-        },
-        {
-          destination: 'RMNP',
-          destinationFullName: 'Rocky Mountain National Park',
-          id: 4,
-        }]
-  )
-
+const DestinationsContainer = ({ destinations, setSelectedDestination }) => {
+  
+  
   const displayDestinations = () => {
-   return destinationNames.map(destination => {
+   return destinations.map(destination => {
       return (
         <DestinationButton setSelectedDestination={setSelectedDestination} key={destination.id} destination={destination} />
       )
@@ -37,8 +14,11 @@ const DestinationsContainer = ({ setSelectedDestination }) => {
   }
 
   return (
-    <div>
-      {displayDestinations()}
+    <div className='main-wrapper-destinationButtons'>
+      <p className='destinationContainerHeader'>destinations</p>
+      <div className='destinationButtonContainer'>
+        {displayDestinations()}
+      </div>
     </div>
   );
 }

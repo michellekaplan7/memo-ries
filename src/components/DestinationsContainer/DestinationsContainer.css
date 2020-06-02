@@ -1,0 +1,31 @@
+.main-wrapper-destinationButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.destinationContainerHeader {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  background-color: #575761;
+  border: 1px solid #575761;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5%;
+  padding: 2% 5%;
+  width: 80%;
+  color: #e4fde1;
+}
+
+.destinationButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: scroll;
+  width: 60%;
+  height: 50vh;
+}
