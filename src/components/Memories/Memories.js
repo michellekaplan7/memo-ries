@@ -21,7 +21,7 @@ export const Memories = ({ destinations }) => {
 
   const destinationContainers = destinations.map((destination) => {
     return (
-      <div key={destination.id} className="destination-recordings-container">
+      <div key={destination.id} className="destination-recordings-container-memories">
         <h3>{destination.destinationFullName} Memories:</h3>
         {displayMemories(destination)}
       </div>

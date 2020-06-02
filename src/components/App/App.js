@@ -77,7 +77,9 @@ const App = () => {
               <div className="destinationContainer">
                 <Header />
                 <div className="bread-crumb-container">
-                  <p className="main-bread-crumb">destinations </p>
+                  <div>
+                    <p className="main-bread-crumb">destinations </p>
+                  </div>
                 </div>
                 <DestinationsContainer
                   setSelectedDestination={setSelectedDestination}

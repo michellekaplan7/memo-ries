@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Recorded } from "../Recorded/Recorded";
+import './Recording.css';
 
 const Recording = ( { destinations, selectedDestination}) => {
   let rec = {};
   let audioChunks = [];
-  
+
   const [savedRecords, setSavedRecords] = useState(() => {
     if (selectedDestination.recordings) {
       return [...selectedDestination.recordings]
@@ -77,11 +78,11 @@ const Recording = ( { destinations, selectedDestination}) => {
   return (
     <div className="recording">
       <div className="controls">
-        <button onClick={() => startAudio()}>Start microphone</button>
-        <button onClick={() => stopAudio()}>Stop microphone</button>
+        <button className="start-mic-btn" onClick={() => startAudio()}>Start mic</button>
+        <button className="stop-mic-btn" onClick={() => stopAudio()}>Stop mic</button>
       </div>
       <p className="recording-count">Recordings ({`${savedRecords.length}`})</p>
-      <div>{renderAllRecordings()}</div>
+      <div className="recording-elem-container">{renderAllRecordings()}</div>
     </div>
   );
 };
