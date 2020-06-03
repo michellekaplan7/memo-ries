@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/";
 
-let destinations, selectedDestination;
+let destinations;
 
 describe("DestinationsContainer", () => {
   it("holds the destination buttons", () => {
@@ -35,17 +35,12 @@ describe("DestinationsContainer", () => {
       },
     ];
 
-    selectedDestination = {
-          destination: "RMNP",
-          destinationFullName: "Rocky Mountain National Park",
-          id: 4,
-          recordings: [],
-        };
+    let mockSetSelectedDestination = jest.fn()
 
     const { getAllByRole } = render(
       <MemoryRouter>
         <DestinationsContainer
-          setSelectedDestination={selectedDestination}
+          setSelectedDestination={mockSetSelectedDestination}
           destinations={destinations}/>
       </MemoryRouter>
     );
