@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Recorded } from "../Recorded/Recorded";
+import Recorded from "../Recorded/Recorded";
 import './Recording.css';
+import PropTypes from 'prop-types'
 
-const Recording = ( { destinations, selectedDestination}) => {
+const Recording = ( { destinations, selectedDestination }) => {
   let rec = {};
   let audioChunks = [];
 
@@ -14,14 +15,13 @@ const Recording = ( { destinations, selectedDestination}) => {
   });
 
   useEffect(() => {
-    findSpecificDestination()
+    retrieveDestinationRecordings()
   })
 
-  const findSpecificDestination = () => {
-    return destinations.map(destination => {
+  const retrieveDestinationRecordings = () => {
+    destinations.forEach(destination => {
       if (destination.id === selectedDestination.id) {
-        destination.recordings = savedRecords;
-        return destination;
+        destination.recordings = savedRecords
       }
     })
   }
@@ -89,6 +89,12 @@ const Recording = ( { destinations, selectedDestination}) => {
       <p className="recording-count">Recordings ({`${savedRecords.length}`})</p>
       <div className="recording-elem-container">{renderAllRecordings()}</div>
     </div>
-  );
-};
+  )
+}
+
+Recording.propType = {
+  destinations: PropTypes.array,
+  selectedDestination: PropTypes.object,
+}
+
 export default Recording;
