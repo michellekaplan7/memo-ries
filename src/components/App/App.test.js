@@ -77,4 +77,43 @@ describe("App", () => {
     expect(allButtons).toHaveLength(5);
     expect(destinationName).not.toBeInTheDocument();
   });
+
+  it("Should see a message when you click on View All Memories in the nav-bar ", () => {
+    const { getByRole, getAllByText } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const welcomeButton = getByRole("button", {
+      name: "Let the memories begin!",
+    });
+    fireEvent.click(welcomeButton);
+
+    const memoriesButton = getByRole('button', {name: 'View All Memories'})
+    fireEvent.click(memoriesButton)
+
+    const recordingMessage = getAllByText('You have no', {exact: false})
+    expect(recordingMessage).toHaveLength(4)
+  });
+
+  it("should be able to make a recording", () => {
+    const { getByRole, getAllByRole, getByText } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+    const welcomeButton = getByRole("button", {
+      name: "Let the memories begin!",
+    });
+    fireEvent.click(welcomeButton);
+    const destinationButton1 = getByRole("button", { name: "RMNP" });
+    fireEvent.click(destinationButton1);
+    const destinationLink = getByRole("link", { name: "destinations" });
+    const destinationName = getByText("Rocky Mountain National Park");
+    fireEvent.click(destinationLink);
+    const allButtons = getAllByRole("button");
+    expect(allButtons).toHaveLength(5);
+    expect(destinationName).not.toBeInTheDocument();
+  });
 });
