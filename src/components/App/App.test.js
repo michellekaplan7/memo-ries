@@ -98,50 +98,27 @@ describe("App", () => {
     expect(recordingMessage).toHaveLength(4)
   });
 
-// // // BIG QUESTION // // //
+  it("should display destination buttons upon clicking the breadcrumb link on the memories page", () => {
+    const { getByRole, getAllByText, getAllByRole } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+    const welcomeButton = getByRole("button", {
+      name: "Let the memories begin!",
+    });
+    fireEvent.click(welcomeButton);
+    const memoriesButton = getByRole("button", { name: "View All Memories" });
+    fireEvent.click(memoriesButton);
+    const recordingMessage = getAllByText("You have no recordings", {
+      exact: false,
+    });
+    expect(recordingMessage).toHaveLength(4);
+    const destinationLink = getByRole("link", { name: "destinations" });
+    fireEvent.click(destinationLink);
+    const allButtons = getAllByRole("button");
+    expect(allButtons).toHaveLength(5);
+    expect(recordingMessage[0]).not.toBeInTheDocument();
+  });
 
-  // it("should be able to make multiple recordings", async () => {
-  //   const { getByRole, getByText } = render(
-  //     <MemoryRouter>
-  //       <App />
-  //     </MemoryRouter>
-  //   );
-  //   const welcomeButton = getByRole("button", {
-  //     name: "Let the memories begin!",
-  //   });
-  //   fireEvent.click(welcomeButton);
-
-  //   const destinationButton1 = getByRole("button", { name: "FoCo" });
-  //   fireEvent.click(destinationButton1);
-
-  //   let recordingCount = getByText('(0)', {exact: false})
-  //   expect(recordingCount).toBeInTheDocument()
-
-  //   // This is where we would mock out the action of recording but we have not prevailed.....
-
-  // const savedRecords = [ {
-  //   src: "blob:http://localhost:3000/96201330-62ed-4313-9435-a12aa460cd3c",
-  //   controls: true,
-  //   autoPlay: false,
-  //   id: 69
-  //   }
-  // ]
-
-  //   recordingCount = getByText('(1)', {exact: false})
-  //   expect(recordingCount).toBeInTheDocument()
-
-  //   // // create one recording
-  //   // const startRec = getByRole('button', {name: 'Start mic'})
-  //   // fireEvent.click(startRec)
-  //   // const stopRec = getByRole('button', {name: 'Stop mic'})
-  //   // fireEvent.click(stopRec)
-  //   // let amountOfRecordings = await waitFor(getByText('(1)', {exact: false}))
-  //   // expect(amountOfRecordings).toBeInTheDocument()
-    
-  //   // // create two recording
-  //   // fireEvent.click(startRec)
-  //   // fireEvent.click(stopRec)
-  //   // amountOfRecordings = await waitFor(getByText('(2)', {exact: false}))
-  //   // expect(amountOfRecordings).toBeInTheDocument()
-  // });
 });
