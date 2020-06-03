@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/";
 
+
 describe("App", () => {
   it("should display the landing page", () => {
     const { getByText, getByRole } = render(
@@ -97,23 +98,50 @@ describe("App", () => {
     expect(recordingMessage).toHaveLength(4)
   });
 
-  it("should be able to make a recording", () => {
-    const { getByRole, getAllByRole, getByText } = render(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>
-    );
-    const welcomeButton = getByRole("button", {
-      name: "Let the memories begin!",
-    });
-    fireEvent.click(welcomeButton);
-    const destinationButton1 = getByRole("button", { name: "RMNP" });
-    fireEvent.click(destinationButton1);
-    const destinationLink = getByRole("link", { name: "destinations" });
-    const destinationName = getByText("Rocky Mountain National Park");
-    fireEvent.click(destinationLink);
-    const allButtons = getAllByRole("button");
-    expect(allButtons).toHaveLength(5);
-    expect(destinationName).not.toBeInTheDocument();
-  });
+// // // BIG QUESTION // // //
+
+  // it("should be able to make multiple recordings", async () => {
+  //   const { getByRole, getByText } = render(
+  //     <MemoryRouter>
+  //       <App />
+  //     </MemoryRouter>
+  //   );
+  //   const welcomeButton = getByRole("button", {
+  //     name: "Let the memories begin!",
+  //   });
+  //   fireEvent.click(welcomeButton);
+
+  //   const destinationButton1 = getByRole("button", { name: "FoCo" });
+  //   fireEvent.click(destinationButton1);
+
+  //   let recordingCount = getByText('(0)', {exact: false})
+  //   expect(recordingCount).toBeInTheDocument()
+
+  //   // This is where we would mock out the action of recording but we have not prevailed.....
+
+  // const savedRecords = [ {
+  //   src: "blob:http://localhost:3000/96201330-62ed-4313-9435-a12aa460cd3c",
+  //   controls: true,
+  //   autoPlay: false,
+  //   id: 69
+  //   }
+  // ]
+
+  //   recordingCount = getByText('(1)', {exact: false})
+  //   expect(recordingCount).toBeInTheDocument()
+
+  //   // // create one recording
+  //   // const startRec = getByRole('button', {name: 'Start mic'})
+  //   // fireEvent.click(startRec)
+  //   // const stopRec = getByRole('button', {name: 'Stop mic'})
+  //   // fireEvent.click(stopRec)
+  //   // let amountOfRecordings = await waitFor(getByText('(1)', {exact: false}))
+  //   // expect(amountOfRecordings).toBeInTheDocument()
+    
+  //   // // create two recording
+  //   // fireEvent.click(startRec)
+  //   // fireEvent.click(stopRec)
+  //   // amountOfRecordings = await waitFor(getByText('(2)', {exact: false}))
+  //   // expect(amountOfRecordings).toBeInTheDocument()
+  // });
 });

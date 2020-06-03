@@ -3,7 +3,7 @@ import Recorded from "../Recorded/Recorded";
 import './Recording.css';
 import PropTypes from 'prop-types'
 
-const Recording = ( { destinations, selectedDestination }) => {
+const Recording = ( { destinations, selectedDestination } ) => {
   let rec = {};
   let audioChunks = [];
 
