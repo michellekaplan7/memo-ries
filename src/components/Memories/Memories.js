@@ -1,8 +1,9 @@
 import React from "react";
 import "./Memories.css";
-import { Recorded } from "../Recorded/Recorded";
+import Recorded from "../Recorded/Recorded";
+import PropTypes from 'prop-types'
 
-export const Memories = ({ destinations }) => {
+const Memories = ({ destinations }) => {
   const displayMemories = (destination) => {
     if (destination.recordings.length > 0) {
       return destination.recordings.map((recording) => {
@@ -35,3 +36,9 @@ export const Memories = ({ destinations }) => {
     </div>
   )
 };
+
+Memories.propTypes = {
+  destinations: PropTypes.array
+}
+
+export default Memories;
