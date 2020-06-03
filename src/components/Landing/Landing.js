@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
 
-function Landing() {
+const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing-logo-container">
