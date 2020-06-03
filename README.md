@@ -45,10 +45,10 @@ npm install
 
 ## Contributors:
 
-[Quinn Elder] (https://github.com/QuinnrElder)
+[Quinn Elder](https://github.com/QuinnrElder)
 
 [Michelle Kaplan](https://github.com/MichelleKaplan7)
 
 [Rachael Thomas](https://github.com/rachael-t)
 
-[John Watterson] (https://github.com/infamouskeyduster)
+[John Watterson](https://github.com/infamouskeyduster)
