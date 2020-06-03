@@ -8,10 +8,12 @@ import "@testing-library/jest-dom/";
 
 describe("DestinationButton", () => {
   it("should display the name of a destination", () => {
+    const mockSetSelectedDestination = jest.fn();
+
     const { getByText } = render(
       <MemoryRouter>
         <DestinationButton
-          setSelectedDestination={""}
+          setSelectedDestination={mockSetSelectedDestination}
           key={3}
           destination={{
             destination: "FoCo",
@@ -28,10 +30,12 @@ describe("DestinationButton", () => {
 
   it("should update the pathname when the destination button is clicked", () => {
     const history = createMemoryHistory();
+    const mockSetSelectedDestination = jest.fn();
+
     const { getByRole } = render(
       <Router history={history}>
         <DestinationButton
-          setSelectedDestination={""}
+          setSelectedDestination={mockSetSelectedDestination}
           key={3}
           destination={{
             destination: "FoCo",

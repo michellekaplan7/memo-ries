@@ -77,4 +77,46 @@ describe("App", () => {
     expect(allButtons).toHaveLength(5);
     expect(destinationName).not.toBeInTheDocument();
   });
+
+  it("Should see a message when you click on View All Memories in the nav-bar ", () => {
+    const { getByRole, getAllByText } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const welcomeButton = getByRole("button", {
+      name: "Let the memories begin!",
+    });
+    fireEvent.click(welcomeButton);
+
+    const memoriesButton = getByRole("button", { name: "View All Memories" });
+    fireEvent.click(memoriesButton);
+
+    const recordingMessage = getAllByText("You have no", { exact: false });
+    expect(recordingMessage).toHaveLength(4);
+  });
+
+  it("should display destination buttons upon clicking the breadcrumb link on the memories page", () => {
+    const { getByRole, getAllByText, getAllByRole } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+    const welcomeButton = getByRole("button", {
+      name: "Let the memories begin!",
+    });
+    fireEvent.click(welcomeButton);
+    const memoriesButton = getByRole("button", { name: "View All Memories" });
+    fireEvent.click(memoriesButton);
+    const recordingMessage = getAllByText("You have no recordings", {
+      exact: false,
+    });
+    expect(recordingMessage).toHaveLength(4);
+    const destinationLink = getByRole("link", { name: "destinations" });
+    fireEvent.click(destinationLink);
+    const allButtons = getAllByRole("button");
+    expect(allButtons).toHaveLength(5);
+    expect(recordingMessage[0]).not.toBeInTheDocument();
+  });
 });

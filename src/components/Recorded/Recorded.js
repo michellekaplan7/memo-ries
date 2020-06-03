@@ -1,5 +1,21 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export const Recorded = ({ src, controls, autoPlay}) => {
-  return <audio src={src} controls={controls} autoPlay={autoPlay} data-testid={'audio'}></audio>
-}
+const Recorded = ({ src, controls, autoPlay }) => {
+  return (
+    <audio
+      src={src}
+      controls={controls}
+      autoPlay={autoPlay}
+      data-testid={"audio"}
+    ></audio>
+  );
+};
+
+Recorded.propTypes = {
+  src: PropTypes.string,
+  controls: PropTypes.bool,
+  autoPlay: PropTypes.bool,
+};
+
+export default Recorded;
