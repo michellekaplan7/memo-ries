@@ -1,19 +1,23 @@
 header {
-  margin: 0;
   width: 100%;
-  line-height: 2em;
-  height: 15vh;
+  height: 22vh;
   background-color: #575761;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+}
+
+header img {
+  margin-top: -1.5rem;
+  width: 345px;
+  display: flex;
 }
 
 .myMemoriesButtonLink {
   text-decoration: none;
   color: #575761;
-  width: 80%;
-  height: 100%;
+  /* width: 80%;
+  height: 100%; */
 }
 
 .landing-logo-container {
@@ -24,34 +28,30 @@ header {
   align-items: center;
 }
 
-.landing-logo-container img {
-  width: 100%;
-  height: 140%;
-}
-
-.myMemoriesButtonLink:hover{ 
-   text-decoration: none;
+.myMemoriesButtonLink:hover{
+  text-decoration: none;
   color: #575761;
 }
 
-.myMemoriesButton{
-  width: 13em;
+.myMemoriesButton {
+  position: relative;
+  top: -45px;
+  width: 14em;
   height: 30px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  font-weight: 500;
-  background-color: #e4fde1;
+  font-weight: 800;
+  color: white;
+  background-color: #8acb88;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  margin-top: 27%;
 }
 
-.myMemoriesButton:hover {
+/* .myMemoriesButton:hover {
   background-color: #8acb88;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-}
+} */

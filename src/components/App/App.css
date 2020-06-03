@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 .destinationContainer {
   width: 100%;
 }
@@ -18,8 +19,11 @@
 }
 
 .bread-crumb-container {
-  margin: 2%;
+  padding-top: 5px;
+  background-color: #648381;
+  height: 2rem;
   display: flex;
+  justify-content: center;
 }
 
 .main-bread-crumb {
@@ -28,9 +32,14 @@
   letter-spacing: 0.8px;
   font-weight: 500;
   display: contents;
+  color: white;
 }
 
 .breadCrumbLink {
+  text-decoration: none;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -39,7 +48,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    overflow: scroll;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -51,7 +59,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    overflow: scroll;
     align-items: center;
     height: 100vh;
     width: 100%;

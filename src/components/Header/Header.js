@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return(
     <header>
-      <div className="landing-logo-container">
+      <div className="header-logo-container">
         <img alt="memories-logo" src="/images/MEMORIES_logo_mobile.png" />
       </div>
       <Link className='myMemoriesButtonLink' to="/memories">

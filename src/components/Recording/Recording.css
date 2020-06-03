@@ -1,0 +1,57 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-mic-btn {
+  width: 11em;
+  height: 50px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  color: maroon;
+  background-color: #ffbf46;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin: 20px 0 20px 0;
+}
+
+.stop-mic-btn {
+  width: 11em;
+  height: 50px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  background-color: maroon;
+  color: #ffbf46;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.recording-count {
+  color: #8acb88;
+  margin-bottom: 10%;
+}
+
+.recording-elem-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #8acb88;
+  padding: 20px 10px 0px 10px;
+  width: 100%;
+}
+
+audio {
+  margin-bottom: 15px;
+}

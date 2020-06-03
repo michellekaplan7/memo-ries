@@ -1,0 +1,51 @@
+.memories-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Denver-recordings-memories {
+  width: 75%;
+  background-color: #8acb88;
+  margin-top: 35px;
+  padding: 10px 70px 10px 70px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Aspen-recordings-memories {
+  width: 75%;
+  background-color: #e4fde1;
+  margin-top: 35px;
+  padding: 10px 70px 10px 70px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FoCo-recordings-memories {
+  width: 75%;
+  background-color: #648381;
+  margin-top: 35px;
+  padding: 10px 70px 10px 70px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.RMNP-recordings-memories {
+  width: 75%;
+  background-color: #ffbf46;
+  margin-top: 35px;
+  padding: 10px 70px 10px 70px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

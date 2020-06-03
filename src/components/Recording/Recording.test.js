@@ -14,12 +14,12 @@ describe("Recording", () => {
       </MemoryRouter>
     );
 
-    const startButton = getByRole("button", { name: "Start microphone" });
-    const stopButton = getByRole("button", { name: "Stop microphone" });
+    const startButton = getByRole("button", { name: "Start mic" });
+    const stopButton = getByRole("button", { name: "Stop mic" });
     const numRecordings = getByText("Recordings", { exact: false });
 
     expect(startButton).toBeInTheDocument();
     expect(stopButton).toBeInTheDocument();
     expect(numRecordings).toBeInTheDocument();
   });
-  });
+});
