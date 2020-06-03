@@ -1,16 +1,14 @@
 import React from "react";
-import { Memories } from "./Memories";
+import Memories from "./Memories";
 import { MemoryRouter } from "react-router-dom";
-import { render, fireEvent, find } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/";
-import { Router } from "react-router";
-import { createMemoryHistory } from "history";
 
 let destinations, recording;
 
 describe('Memories', () => {
 
-it('should display a message when there are no mmemories present…', () => {
+it('should display a message when there are no memories present…', () => {
   destinations = [
     {
       destination: "Denver",
@@ -26,7 +24,7 @@ it('should display a message when there are no mmemories present…', () => {
     </MemoryRouter>
   );
 
-  const { getByText, getByRole, getByAltText } = render(router);
+  const { getByText } = render(router);
   const destination = getByText("Denver Memories:");
   const errorMessage = getByText("You have no recordings for this location.");
 
@@ -57,7 +55,7 @@ it('Should display a recording for a destination when one is present', () => {
     </MemoryRouter>
   );
 
-  const { getByText, getByRole, getByAltText, getByTestId } = render(router);
+  const { getByText, getByTestId } = render(router);
   const destination = getByText("Denver Memories:");
   const recordingElement = getByTestId("audio");
 
