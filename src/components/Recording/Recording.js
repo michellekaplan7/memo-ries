@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Recorded from "../Recorded/Recorded";
-import './Recording.css';
-import PropTypes from 'prop-types'
+import "./Recording.css";
+import PropTypes from "prop-types";
 
-const Recording = ( { destinations, selectedDestination } ) => {
+const Recording = ({ destinations, selectedDestination }) => {
   let rec = {};
   let audioChunks = [];
 
   const [savedRecords, setSavedRecords] = useState(() => {
     if (selectedDestination.recordings) {
-      return [...selectedDestination.recordings]
+      return [...selectedDestination.recordings];
     }
-      return []
+    return [];
   });
 
   useEffect(() => {
-    retrieveDestinationRecordings()
-  })
+    retrieveDestinationRecordings();
+  });
 
   const retrieveDestinationRecordings = () => {
-    destinations.forEach(destination => {
+    destinations.forEach((destination) => {
       if (destination.id === selectedDestination.id) {
-        destination.recordings = savedRecords
+        destination.recordings = savedRecords;
       }
-    })
-  }
+    });
+  };
 
   const getMediaRecordingApi = async () => {
     let audioPromise = await navigator.mediaDevices.getUserMedia({
@@ -59,7 +59,7 @@ const Recording = ( { destinations, selectedDestination } ) => {
   };
 
   const stopAudio = () => {
-    if (rec.state === 'recording') {
+    if (rec.state === "recording") {
       rec.stop();
       onSuccess();
     } else {
@@ -83,18 +83,22 @@ const Recording = ( { destinations, selectedDestination } ) => {
   return (
     <div className="recording">
       <div className="controls">
-        <button className="start-mic-btn" onClick={() => startAudio()}>Start mic</button>
-        <button className="stop-mic-btn" onClick={() => stopAudio()}>Stop mic</button>
+        <button className="start-mic-btn" onClick={() => startAudio()}>
+          Start mic
+        </button>
+        <button className="stop-mic-btn" onClick={() => stopAudio()}>
+          Stop mic
+        </button>
       </div>
       <p className="recording-count">Recordings ({`${savedRecords.length}`})</p>
       <div className="recording-elem-container">{renderAllRecordings()}</div>
     </div>
-  )
-}
+  );
+};
 
 Recording.propType = {
   destinations: PropTypes.array,
   selectedDestination: PropTypes.object,
-}
+};
 
 export default Recording;

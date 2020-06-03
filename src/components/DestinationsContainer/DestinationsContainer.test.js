@@ -35,13 +35,14 @@ describe("DestinationsContainer", () => {
       },
     ];
 
-    let mockSetSelectedDestination = jest.fn()
+    let mockSetSelectedDestination = jest.fn();
 
     const { getAllByRole } = render(
       <MemoryRouter>
         <DestinationsContainer
           setSelectedDestination={mockSetSelectedDestination}
-          destinations={destinations}/>
+          destinations={destinations}
+        />
       </MemoryRouter>
     );
 

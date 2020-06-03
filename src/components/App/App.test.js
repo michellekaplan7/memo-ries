@@ -4,7 +4,6 @@ import { MemoryRouter } from "react-router-dom";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/";
 
-
 describe("App", () => {
   it("should display the landing page", () => {
     const { getByText, getByRole } = render(
@@ -91,11 +90,11 @@ describe("App", () => {
     });
     fireEvent.click(welcomeButton);
 
-    const memoriesButton = getByRole('button', {name: 'View All Memories'})
-    fireEvent.click(memoriesButton)
+    const memoriesButton = getByRole("button", { name: "View All Memories" });
+    fireEvent.click(memoriesButton);
 
-    const recordingMessage = getAllByText('You have no', {exact: false})
-    expect(recordingMessage).toHaveLength(4)
+    const recordingMessage = getAllByText("You have no", { exact: false });
+    expect(recordingMessage).toHaveLength(4);
   });
 
   it("should display destination buttons upon clicking the breadcrumb link on the memories page", () => {
@@ -120,5 +119,4 @@ describe("App", () => {
     expect(allButtons).toHaveLength(5);
     expect(recordingMessage[0]).not.toBeInTheDocument();
   });
-
 });

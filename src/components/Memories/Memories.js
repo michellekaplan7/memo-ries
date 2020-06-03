@@ -1,7 +1,7 @@
 import React from "react";
 import "./Memories.css";
 import Recorded from "../Recorded/Recorded";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Memories = ({ destinations }) => {
   const displayMemories = (destination) => {
@@ -22,7 +22,10 @@ const Memories = ({ destinations }) => {
 
   const destinationContainers = destinations.map((destination) => {
     return (
-      <div key={destination.id} className={destination.destination + '-recordings-memories'}>
+      <div
+        key={destination.id}
+        className={destination.destination + "-recordings-memories"}
+      >
         <h3>{destination.destinationFullName} Memories:</h3>
         <br />
         {displayMemories(destination)}
@@ -30,15 +33,11 @@ const Memories = ({ destinations }) => {
     );
   });
 
-  return(
-    <div className="memories-container">
-      {destinationContainers}
-    </div>
-  )
+  return <div className="memories-container">{destinationContainers}</div>;
 };
 
 Memories.propTypes = {
-  destinations: PropTypes.array
-}
+  destinations: PropTypes.array,
+};
 
 export default Memories;

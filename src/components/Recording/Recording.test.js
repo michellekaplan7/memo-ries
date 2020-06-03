@@ -8,7 +8,7 @@ describe("Recording", () => {
   it("should display the buttons and number of recordings when rendered", () => {
     const { getByRole, getByText } = render(
       <MemoryRouter>
-        <Recording key={1} destinations={[]} selectedDestination={{}}/>
+        <Recording key={1} destinations={[]} selectedDestination={{}} />
       </MemoryRouter>
     );
 
