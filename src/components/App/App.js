@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Landing from "../Landing/Landing";
 import Header from "../Header/Header";
-import { Memories } from "../Memories/Memories";
+import Memories from "../Memories/Memories";
 import DestinationDetails from "../DestinationDetails/DestinationDetails";
 import DestinationsContainer from "../DestinationsContainer/DestinationsContainer";
 
