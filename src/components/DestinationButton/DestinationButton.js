@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './DestinationButton.css';
+import PropTypes from "prop-types";
 
 const DestinationButton = (props) => {
+
   return (
     <Link className='destinationButtonLink' to={`/destinations/${props.destination.destination}`}>
       <button
@@ -15,5 +17,11 @@ const DestinationButton = (props) => {
     </Link>
   );
 };
+
+DestinationButton.propTypes = {
+  setSelectedDestination: PropTypes.func,
+  destination: PropTypes.object
+};
+
 
 export default DestinationButton;
