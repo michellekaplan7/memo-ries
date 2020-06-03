@@ -1,6 +1,7 @@
 import React from 'react';
 import './DestinationsContainer.css';
 import DestinationButton from '../DestinationButton/DestinationButton';
+import PropTypes from 'prop-types'
 
 const DestinationsContainer = ({ destinations, setSelectedDestination }) => {
   
@@ -21,6 +22,11 @@ const DestinationsContainer = ({ destinations, setSelectedDestination }) => {
       </div>
     </div>
   );
+}
+
+DestinationsContainer.propTypes = {
+  destinations: PropTypes.array,
+  setSelectedDestination: PropTypes.func,
 }
 
 export default DestinationsContainer;
