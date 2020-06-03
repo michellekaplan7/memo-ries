@@ -2,6 +2,7 @@ import React from 'react';
 import './DestinationDetails.css';
 import SimpleImageSlider from "react-simple-image-slider";
 import Recording from '../Recording/Recording'
+import PropTypes from 'prop-types'
 
 const DestinationDetails = ({selectedDestination, destinations}) => {
 
@@ -31,5 +32,10 @@ const DestinationDetails = ({selectedDestination, destinations}) => {
     </div>
   );
 }
+
+DestinationDetails.propTypes = {
+  selectedDestination: PropTypes.object,
+  destinations: PropTypes.array
+};
 
 export default DestinationDetails;
