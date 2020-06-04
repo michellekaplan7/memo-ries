@@ -22,6 +22,7 @@ header img {
 
 .landing-logo-container {
   width: 100%;
+  height: 100%;
   background-color: #575761;
   display: flex;
   justify-content: center;
