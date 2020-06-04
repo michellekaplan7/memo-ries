@@ -75,7 +75,7 @@ hr {
   background-image: url("/images/sound_bars_v1.png");
   background-size: 255px;
   background-repeat: repeat-x;
-  background-position: 50% 90%;
+  background-position: 50% 95%;
   display: flex;
   flex-direction: column;
 }
